@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "https://travel-story-app-c4qg.onrender.com"; // Ensure this matches your backend
+const API_BASE_URL = "http://localhost:8000"; // Local backend URL // Ensure this matches your backend
 
 const uploadImage = async (imageFile) => {
   const formData = new FormData();

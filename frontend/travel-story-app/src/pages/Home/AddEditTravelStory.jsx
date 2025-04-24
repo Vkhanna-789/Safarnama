@@ -34,7 +34,7 @@ const AddEditTravelStory = ({ storyInfo, onClose, getAllTravelStories, type }) =
       formData.append("image", file); // ✅ Fix: Use "image" as the key
 
       console.log("Uploading Image...");
-      const response = await axios.post("https://travel-story-app-c4qg.onrender.com/image-upload", formData, {
+      const response = await axios.post("http://localhost:8000/image-upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

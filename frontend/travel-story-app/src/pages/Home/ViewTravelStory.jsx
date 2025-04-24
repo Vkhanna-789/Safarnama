@@ -7,7 +7,7 @@ import AddComment from "../../components/AddComment.jsx";
 
 const ViewTravelStory = ({ setOpenViewModal, setOpenAddEditModal, storyInfo, onClose, onDeleteClick }) => {
   const [comments, setComments] = useState([]);
-const BASE_URL = "https://travel-story-app-c4qg.onrender.com"; // Deployed backend
+  const BASE_URL = "http://localhost:8000"; // Deployed backend
   useEffect(() => {
     console.log("Story ID before fetching comments:", storyInfo?._id);
 
@@ -16,7 +16,7 @@ const BASE_URL = "https://travel-story-app-c4qg.onrender.com"; // Deployed backe
       return;
     }
 
-    fetch(`https://travel-story-app-c4qg.onrender.com/stories/${storyInfo._id}/comments`)
+    fetch(`http://localhost:8000/stories/${storyInfo._id}/comments`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
         return res.json();

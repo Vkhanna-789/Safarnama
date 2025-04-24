@@ -6,7 +6,7 @@ const Comments = ({ storyId }) => {
     useEffect(() => {
         if (!storyId) return;
     
-        fetch(`https://travel-story-app-c4qg.onrender.com/stories/${storyId}/comments`)
+        fetch(`http://localhost:8000/stories/${storyId}/comments`)
             .then((res) => res.json())
             .then((data) => {
                 console.log("Fetched comments:", data); // Debugging output

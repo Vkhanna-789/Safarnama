@@ -33,7 +33,7 @@ const AddComment = ({ storyId, userId, onCommentAdded }) => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch(`https://travel-story-app-c4qg.onrender.com/stories/${storyId}/comments`, {
+            const response = await fetch(`http://localhost:8000/stories/${storyId}/comments`, {
                 method: "POST",
                 headers: { 
                     "Content-Type": "application/json",
