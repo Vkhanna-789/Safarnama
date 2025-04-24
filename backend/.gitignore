@@ -1,0 +1,13 @@
+# server/.gitignore
+
+# Ignore node_modules
+node_modules/
+
+# Ignore .env file
+.env
+
+# Ignore dist folder (if using TypeScript)
+dist/
+
+# Ignore upload folder
+upload/
