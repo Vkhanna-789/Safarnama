@@ -32,7 +32,14 @@ const Navbar = ({ userInfo, searchQuery, setSearchQuery, onSearchNote, handleCle
   return (
     <div className="bg-white flex items-center justify-between px-4 md:px-6 py-2 shadow-md sticky top-0 z-10">
       {/* Logo */}
-      <img src={LOGO} alt="travel story" className="h-8 md:h-9" />
+      <div className="flex items-center h-14 md:h-16" style={{ minWidth: 0 }}>
+        <img 
+          src={LOGO} 
+          alt="travel story" 
+          className="h-full w-auto max-w-[160px] object-contain p-0 m-0 block" 
+          style={{ display: 'block', maxHeight: '100%', maxWidth: '100%' }}
+        />
+      </div>
 
       {isToken && (
         <>

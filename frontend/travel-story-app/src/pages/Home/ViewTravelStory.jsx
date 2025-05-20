@@ -59,7 +59,11 @@ const ViewTravelStory = ({ setOpenViewModal, setOpenAddEditModal, storyInfo, onC
           
 
 <img
-  src={storyInfo?.imageUrl?.trim() ? `${BASE_URL}/uploads/${storyInfo.imageUrl}` : "https://via.placeholder.com/150"}
+  src={
+    storyInfo?.imageUrl?.trim()
+      ? storyInfo.imageUrl
+      : "https://via.placeholder.com/150"
+  }
   alt="Travel Story"
   className="w-full h-[300px] object-cover rounded-lg"
 />
